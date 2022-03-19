@@ -12,12 +12,20 @@ public class Player : MonoBehaviour
 
     [SerializeField] float maxVelocityY = 25;
 
-    Rigidbody rb;
+    private Vector3 initialPos;
+    private Quaternion initialRot;
 
-    void Start()
+    Rigidbody rb;
+    
+    private void Awake()
     {
-        rb = new Rigidbody();
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        initialPos = transform.position;
+        initialRot = transform.rotation;
     }
 
     // Update is called once per frame
@@ -34,54 +42,34 @@ public class Player : MonoBehaviour
     private void Movement()
     {
         if (Input.GetKey(KeyCode.UpArrow))
-        {
             transform.Rotate(-transform.right);
-        }
 
         if (Input.GetKey(KeyCode.DownArrow))
-        {
             transform.Rotate(transform.right);
-        }
 
         if (Input.GetKey(KeyCode.LeftArrow))
-        {
             transform.Rotate(-transform.up);
-        }
 
         if (Input.GetKey(KeyCode.RightArrow))
-        {
             transform.Rotate(transform.up);
-        }
 
         if (Input.GetKey(KeyCode.W))
-        {
             rb.AddForce(transform.forward * speedX);
-        }
 
         if (Input.GetKey(KeyCode.S))
-        {
             rb.AddForce(transform.forward * -speedX);
-        }
 
         if (Input.GetKey(KeyCode.Space))
         {
             if (rb.velocity.y < maxVelocityY)
-            {
                 rb.AddForce(new Vector3(0, speedY, 0));
-            }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void ResetPlayerPos()
     {
-        //if (collision.gameObject.tag == "Planet") //Preguntar como hacer para que solo con el tag del "padre" se pueda chequear
-        //{
-        //    rb.constraints = RigidbodyConstraints.FreezeRotation;
-        //}
-        //else
-        //{
-        //    rb.constraints = RigidbodyConstraints.None;
-        //    rb.constraints = RigidbodyConstraints.FreezeRotationZ;
-        //}
+        transform.position = initialPos;
+        transform.rotation = initialRot;
+        rb.velocity = Vector3.zero;
     }
 }

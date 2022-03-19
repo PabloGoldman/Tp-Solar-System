@@ -6,6 +6,8 @@ public class Camera : MonoBehaviour
 {
 
     [SerializeField] GameObject player;
+    [SerializeField] Vector3 offset;
+    [SerializeField] GameObject targetToFollow;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,9 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position;
-        transform.rotation = player.transform.rotation;
+        //transform.position = targetToFollow.transform.position + offset;
+        //transform.rotation = targetToFollow.transform.rotation;
+
+        //transform.LookAt(targetToFollow.transform);
     }
 }

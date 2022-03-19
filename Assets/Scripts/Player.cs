@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     //[SerializeField] Vector3 upSpeed;
     [SerializeField] float speedX, speedY;
-    [SerializeField] Vector3 rotationSpeed;
+    [SerializeField] float rotationSpeed;
 
     [SerializeField] float maxVelocityY = 25;
 
@@ -21,26 +21,46 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         Movement();
     }
 
+    void Update()
+    {
+
+    }
+
     private void Movement()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Rotate(rotationSpeed);
+            transform.Rotate(-transform.right);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Rotate(-rotationSpeed);
+            transform.Rotate(transform.right);
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Rotate(-transform.up);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Rotate(transform.up);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(new Vector3(speedX, 0, 0));
+            rb.AddForce(transform.forward * speedX);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(transform.forward * -speedX);
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -50,8 +70,18 @@ public class Player : MonoBehaviour
                 rb.AddForce(new Vector3(0, speedY, 0));
             }
         }
+    }
 
-        //Vector3 movement = new Vector3(speedX, 0.0f, speedY);
-        //rb.AddForce(movement);
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if (collision.gameObject.tag == "Planet") //Preguntar como hacer para que solo con el tag del "padre" se pueda chequear
+        //{
+        //    rb.constraints = RigidbodyConstraints.FreezeRotation;
+        //}
+        //else
+        //{
+        //    rb.constraints = RigidbodyConstraints.None;
+        //    rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+        //}
     }
 }

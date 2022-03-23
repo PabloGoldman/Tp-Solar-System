@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0ef2e2b7c00a504bb9d75ffdf571cf4, type: 3}
-  m_Name: Whale
+  m_Name: Statue
   m_EditorClassIdentifier: 
-  Name: Whale
+  Name: Statue
   rarity: 0
-  character: {fileID: -927199367670048503, guid: 54aa7d7c19fc11a458eec7f04a5f4668, type: 3}
+  character: {fileID: 1682282789023726, guid: 1609fc045200fb14294bfdd17cc92469, type: 3}

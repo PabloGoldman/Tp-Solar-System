@@ -30,10 +30,9 @@ public class Selector : MonoBehaviour
             go.transform.SetParent(spot);
             characters.Add(go);
 
-            if (Models.Name == "Whale")
+            if (Models.Name == "Statue")
             {
-                go.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-                go.transform.position = new Vector3(spot.position.x, 1.4f, spot.position.z);
+                go.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
             }
         }
 

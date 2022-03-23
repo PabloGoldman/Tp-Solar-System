@@ -30,9 +30,10 @@ public class Selector : MonoBehaviour
             go.transform.SetParent(spot);
             characters.Add(go);
 
-            if (Models.Name == "Statue")
+            if (Models.Name == "Dilox")
             {
                 go.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+                go.transform.position = new Vector3(spot.position.x, spot.position.y + 0.12f, spot.position.z);
             }
         }
 

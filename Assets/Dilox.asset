@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Statue
   rarity: 0
-  character: {fileID: 1682282789023726, guid: 1609fc045200fb14294bfdd17cc92469, type: 3}
+  character: {fileID: 8855321982953781901, guid: a42eeadf39c17114ca595ef41049c845, type: 3}

@@ -6,6 +6,7 @@ using TMPro;
 public class Selector : MonoBehaviour
 {
     public Models[] characterModels;
+
     public Transform spot;
     public TextMeshProUGUI title;
 
@@ -43,13 +44,15 @@ public class Selector : MonoBehaviour
     void ShowCharacterFromList()
     {
         characters[currentCharacter].SetActive(true);
-
         title.text = characterModels[currentCharacter].Name;
+
+        characterModels[currentCharacter].isActive = true;
     }
 
     public void OnClickNext()
     {
         characters[currentCharacter].SetActive(false);
+        characterModels[currentCharacter].isActive = false;
 
         if (currentCharacter < characters.Count - 1)
             ++currentCharacter;
@@ -62,6 +65,7 @@ public class Selector : MonoBehaviour
     public void OnClickPrevious()
     {
         characters[currentCharacter].SetActive(false);
+        characterModels[currentCharacter].isActive = false;
 
         if (currentCharacter == 0)
             currentCharacter = characters.Count - 1;

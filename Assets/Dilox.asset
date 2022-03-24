@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0ef2e2b7c00a504bb9d75ffdf571cf4, type: 3}
-  m_Name: Statue
+  m_Name: Dilox
   m_EditorClassIdentifier: 
-  Name: Statue
+  Name: Dilox
   rarity: 0
   character: {fileID: 8855321982953781901, guid: a42eeadf39c17114ca595ef41049c845, type: 3}

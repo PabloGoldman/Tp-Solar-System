@@ -5,7 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+
+    //Se guarda el modelo en un scriptable object aparte, que guarde el modelo a usar
+    //y el player lo tome de ahi
+    [SerializeField] private Models model;
+
     [SerializeField] float forwardSpeed = 25f, horizontalSpeed = 7.5f, verticalSpeed = 5f;
     [SerializeField] float activeForwardSpeed, activeHorizontalSpeed, activeVerticalSpeed;
 

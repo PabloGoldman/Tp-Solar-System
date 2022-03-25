@@ -16,5 +16,5 @@ MonoBehaviour:
   isActive: 0
   speed: 7
   rarity: 0
-  character: {fileID: 8855321982953781901, guid: a3cbfb468e8430941ad14ac682de7ae9, type: 3}
+  character: {fileID: 1261967083292032, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   descripcion: 

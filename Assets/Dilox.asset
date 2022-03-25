@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dilox
   m_EditorClassIdentifier: 
   Name: Dilox
-  isActive: 0
+  isActive: 1
   speed: 10
   rarity: 0
-  character: {fileID: 8855321982953781901, guid: a42eeadf39c17114ca595ef41049c845, type: 3}
+  character: {fileID: 1993769037395402, guid: 73b09e5094ff94fddac6945d623c08af, type: 3}
   descripcion: 

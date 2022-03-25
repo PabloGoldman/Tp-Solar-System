@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SceneCamera : MonoBehaviour
 {
+    public Transform target;
+
+    [SerializeField]float rotationSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -11,8 +15,9 @@ public class SceneCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        transform.LookAt(target);
+        transform.Translate(Vector3.right * Time.deltaTime * rotationSpeed);
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0ef2e2b7c00a504bb9d75ffdf571cf4, type: 3}
-  m_Name: Dilox
+  m_Name: Nave4
   m_EditorClassIdentifier: 
-  Name: Dilox
-  isActive: 1
-  speed: 10
+  Name: Namor
+  isActive: 0
+  speed: 5
   rarity: 0
-  character: {fileID: 1993769037395402, guid: 73b09e5094ff94fddac6945d623c08af, type: 3}
+  character: {fileID: 1542112843390278, guid: ef6ab94c04502497498daa16165ee0bd, type: 3}
   descripcion: 

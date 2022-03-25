@@ -21,5 +21,7 @@ public class Camera : MonoBehaviour
         //transform.rotation = targetToFollow.transform.rotation;
 
         //transform.LookAt(player.transform);
+
+        transform.position = GameManager.self.actualModel.character.transform.position;
     }
 }

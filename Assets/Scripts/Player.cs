@@ -6,9 +6,11 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    //Se guarda el modelo en un scriptable object aparte, que guarde el modelo a usar
-    //y el player lo tome de ahi
-    [SerializeField] private Models model;
+    //Hacer un game manager Singleton y Don't destroy on load
+    //que guarde que personaje esta activo
+    //habria que en el juego poner a todos los personajes y que solo se muestre el que esta activo (seguro se puede hacer mejor)
+
+    //[SerializeField] private Models model;
 
     [SerializeField] float forwardSpeed = 25f, horizontalSpeed = 7.5f, verticalSpeed = 5f;
     [SerializeField] float activeForwardSpeed, activeHorizontalSpeed, activeVerticalSpeed;
@@ -45,10 +47,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        Movement();
     }
 
     void Update()
+    {
+        //Si estas en el juego
+
+        if (ScManager.self.ActualScene() == 1)
+        {
+            Movement();
+        }
+    } 
+
+    private void Movement()
     {
         lookInput.x = Input.mousePosition.x;
         lookInput.y = Input.mousePosition.y;
@@ -68,13 +79,8 @@ public class Player : MonoBehaviour
         activeVerticalSpeed = Mathf.Lerp(activeVerticalSpeed, Input.GetAxisRaw("Up") * verticalSpeed, upAcceleration * Time.deltaTime);
 
         transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
-        transform.position += (transform.right * activeHorizontalSpeed * Time.deltaTime) + 
+        transform.position += (transform.right * activeHorizontalSpeed * Time.deltaTime) +
             (transform.up * activeVerticalSpeed * Time.deltaTime);
-    } 
-
-    private void Movement()
-    {
-       
     }
 
     public void ResetPlayerPos()

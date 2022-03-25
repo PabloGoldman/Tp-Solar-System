@@ -9,9 +9,13 @@ public class Models : ScriptableObject
 
     public bool isActive;
 
+    public int speed;
+
     public enum Rarity { Tier1, Tier2, Tier3};
 
     public Rarity rarity;
 
     public GameObject character;
+
+    public string descripcion;
 }

@@ -4,27 +4,62 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Player player;
+    public static GameManager self;
 
-    
+    public Models actualModel;
+
+    public Vector3 spawnPoint;
+
+    bool alreadyLoaded = false;
+
+    GameObject player;
+
+    void Awake()
+    {
+        if (self != null && self != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            self = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        InputManager();
+        if (ScManager.self.ActualScene() == 1 && !alreadyLoaded)
+        {
+            InstantiatePlayer();
+            alreadyLoaded = true;
+        }
+        else if(ScManager.self.ActualScene() != 1)
+        {
+            alreadyLoaded = false;
+
+            if (player != null)
+            {
+                Destroy(player);
+            }
+        }
     }
 
-    void InputManager()
+    public void SetModel(Models model)
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            player.ResetPlayerPos();
-        }
+        actualModel = model;
+    }
+
+    public void InstantiatePlayer()
+    {
+        player = Instantiate(actualModel.character, spawnPoint, Quaternion.identity);
+        player.SetActive(true);
     }
 }

@@ -8,7 +8,9 @@ public class Selector : MonoBehaviour
     public Models[] characterModels;
 
     public Transform spot;
+
     public TextMeshProUGUI title;
+    public TextMeshProUGUI speed;
 
     private List<GameObject> characters;
 
@@ -30,12 +32,6 @@ public class Selector : MonoBehaviour
             go.SetActive(false);
             go.transform.SetParent(spot);
             characters.Add(go);
-
-            if (Models.Name == "Dilox")
-            {
-                go.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
-                go.transform.position = new Vector3(spot.position.x, spot.position.y + 0.12f, spot.position.z);
-            }
         }
 
         ShowCharacterFromList();
@@ -44,9 +40,14 @@ public class Selector : MonoBehaviour
     void ShowCharacterFromList()
     {
         characters[currentCharacter].SetActive(true);
+
         title.text = characterModels[currentCharacter].Name;
+        speed.text = "Speed: " + characterModels[currentCharacter].speed.ToString();
 
         characterModels[currentCharacter].isActive = true;
+
+        //Seteo el player al game manager
+        GameManager.self.SetModel(characterModels[currentCharacter]);
     }
 
     public void OnClickNext()

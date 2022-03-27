@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //PREGUNTARLE A SERGIO COMO TESTEAR EL JUEGO SIN PASAR X EL SELECTOR DE PERSONAJE
+    //POR EJ SI QUIERO TESTEAR LA CAMARA SOLO EN EL JUEGO
+
+    //PREGUNTAR X LO DEL ALREADYLOADED QUE EL JUGADOR SE INSTANCIABA EN LA OTRA ESCENA
+
     public static GameManager self;
 
-    public Models actualModel;
+
+    private Models actualModel;
+    public Models GetModel() => actualModel;
+    public void SetModel(Models model) => actualModel = model;
+
 
     public Vector3 spawnPoint;
 
     bool alreadyLoaded = false;
 
     GameObject player;
+    public GameObject GetPlayer() => player;
 
     void Awake()
     {
@@ -50,11 +60,6 @@ public class GameManager : MonoBehaviour
                 Destroy(player);
             }
         }
-    }
-
-    public void SetModel(Models model)
-    {
-        actualModel = model;
     }
 
     public void InstantiatePlayer()

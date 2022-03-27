@@ -44,7 +44,6 @@ public class Selector : MonoBehaviour
         title.text = characterModels[currentCharacter].Name;
         speed.text = "Speed: " + characterModels[currentCharacter].speed.ToString();
 
-        characterModels[currentCharacter].isActive = true;
 
         //Seteo el player al game manager
         GameManager.self.SetModel(characterModels[currentCharacter]);
@@ -53,7 +52,6 @@ public class Selector : MonoBehaviour
     public void OnClickNext()
     {
         characters[currentCharacter].SetActive(false);
-        characterModels[currentCharacter].isActive = false;
 
         if (currentCharacter < characters.Count - 1)
             ++currentCharacter;
@@ -66,7 +64,6 @@ public class Selector : MonoBehaviour
     public void OnClickPrevious()
     {
         characters[currentCharacter].SetActive(false);
-        characterModels[currentCharacter].isActive = false;
 
         if (currentCharacter == 0)
             currentCharacter = characters.Count - 1;

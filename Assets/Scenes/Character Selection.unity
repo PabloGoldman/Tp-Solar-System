@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 168951315}
   - component: {fileID: 168951314}
-  - component: {fileID: 168951316}
   - component: {fileID: 168951313}
+  - component: {fileID: 168951316}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -345,7 +345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Previous
 --- !u!222 &192692882
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 102, y: 15}
+  m_AnchoredPosition: {x: 694, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219816182
@@ -650,7 +650,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Next
 --- !u!222 &257548866
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1399,7 +1399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513663610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -116.9, y: -0.097, z: 1.13}
+  m_LocalPosition: {x: -116.97, y: -0.097, z: 1.48}
   m_LocalScale: {x: 1.1494403, y: 2.478791, z: 0.9289854}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1434,7 +1434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5754e6e6f02cf0498e1c3910b434469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualModel: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &1542492750
 Transform:
@@ -1686,7 +1685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -106, y: 15}
+  m_AnchoredPosition: {x: -685, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108766708

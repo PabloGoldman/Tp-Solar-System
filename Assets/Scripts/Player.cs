@@ -47,16 +47,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-    }
-
-    void Update()
-    {
         //Si estas en el juego
 
         if (ScManager.self.ActualScene() == 1)
         {
             Movement();
         }
+    }
+
+    void Update()
+    {
+       
     } 
 
     private void Movement()

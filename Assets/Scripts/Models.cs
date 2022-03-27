@@ -7,8 +7,6 @@ public class Models : ScriptableObject
 {
     public string Name;
 
-    public bool isActive;
-
     public int speed;
 
     public enum Rarity { Tier1, Tier2, Tier3};

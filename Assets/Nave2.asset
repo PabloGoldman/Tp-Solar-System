@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ef2e2b7c00a504bb9d75ffdf571cf4, type: 3}
   m_Name: Nave2
   m_EditorClassIdentifier: 
-  Name: Marduk 43
-  isActive: 1
+  Name: Issem
   speed: 7
   rarity: 0
   character: {fileID: 1261967083292032, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}

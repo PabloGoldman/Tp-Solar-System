@@ -20,4 +20,9 @@ public class SceneCamera : MonoBehaviour
         transform.LookAt(target);
         transform.Translate(Vector3.right * Time.deltaTime * rotationSpeed);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

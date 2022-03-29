@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //AGREGAR GAME QUITTER OBJETO VACIO CON UN SCRIPT PARA SALIR DEL JUEGO
+
     public static GameManager self;
 
     [SerializeField] Models defaultModel;

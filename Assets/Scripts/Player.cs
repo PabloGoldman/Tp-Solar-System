@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
         transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
         transform.position += (transform.right * activeHorizontalSpeed * Time.deltaTime) +
             (transform.up * activeVerticalSpeed * Time.deltaTime);
+
     }
 
     public void ResetPlayerPos()

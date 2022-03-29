@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //PREGUNTAR X LO DEL ALREADYLOADED QUE EL JUGADOR SE INSTANCIABA EN LA OTRA ESCENA
-
     public static GameManager self;
 
     [SerializeField] Models defaultModel;

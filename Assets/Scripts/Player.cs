@@ -6,12 +6,6 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    //Hacer un game manager Singleton y Don't destroy on load
-    //que guarde que personaje esta activo
-    //habria que en el juego poner a todos los personajes y que solo se muestre el que esta activo (seguro se puede hacer mejor)
-
-    //[SerializeField] private Models model;
-
     [SerializeField] float forwardSpeed = 25f, horizontalSpeed = 7.5f, verticalSpeed = 5f;
     [SerializeField] float activeForwardSpeed, activeHorizontalSpeed, activeVerticalSpeed;
 

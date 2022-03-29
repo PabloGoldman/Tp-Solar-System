@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public Transform target;
+    Transform target;
     public float smoothSpeed = 6f;
     [SerializeField] Vector3 offset;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void FixedUpdate()
     {
@@ -28,11 +22,6 @@ public class Camera : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, Time.fixedDeltaTime * smoothSpeed);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void SetTarget() => target = GameManager.self.GetPlayer().transform;
     
 }

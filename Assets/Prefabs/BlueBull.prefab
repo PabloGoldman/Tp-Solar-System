@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4820260890093242}
   - component: {fileID: -3206848066064175372}
   - component: {fileID: -3819858341861652168}
+  - component: {fileID: 2372788990290888472}
   m_Layer: 0
   m_Name: BlueBull
   m_TagString: Untagged
@@ -156,6 +157,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2372788990290888472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993769037395402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.482142, y: 1, z: 5.0620017}
+  m_Center: {x: -0.20206976, y: 0, z: 0.07262635}
 --- !u!1001 &6288770543917949089
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet : MonoBehaviour
+public class Traslation : MonoBehaviour
 {
-    [SerializeField] float speed, rotationSpeed;
-    public Transform sun, self;
+    [SerializeField] float speed;
+
+    public Transform sun;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,6 @@ public class Planet : MonoBehaviour
     void Update()
     {
         RotateAround(sun, speed);
-        RotateAround(self, rotationSpeed);
     }
 
     private void RotateAround(Transform target, float speed)
@@ -30,7 +30,5 @@ public class Planet : MonoBehaviour
     {
         if (speed == 0)
             speed = 5;
-        else if (rotationSpeed == 0)
-            rotationSpeed = 50;
     }
 }

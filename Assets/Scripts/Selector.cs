@@ -35,6 +35,7 @@ public class Selector : MonoBehaviour
         }
 
         ShowCharacterFromList();
+
     }
 
     void ShowCharacterFromList()

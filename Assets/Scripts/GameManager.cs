@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //PREGUNTARLE A SERGIO COMO TESTEAR EL JUEGO SIN PASAR X EL SELECTOR DE PERSONAJE
-    //POR EJ SI QUIERO TESTEAR LA CAMARA SOLO EN EL JUEGO
-
     //PREGUNTAR X LO DEL ALREADYLOADED QUE EL JUGADOR SE INSTANCIABA EN LA OTRA ESCENA
 
     public static GameManager self;
 
+    [SerializeField] Models defaultModel;
 
-    private Models actualModel;
+    private Models actualModel = null;
     public Models GetModel() => actualModel;
     public void SetModel(Models model) => actualModel = model;
-
 
     public Vector3 spawnPoint;
 
@@ -40,7 +37,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (actualModel == null)
+        {
+            SetModel(defaultModel);
+        }
     }
 
     // Update is called once per frame

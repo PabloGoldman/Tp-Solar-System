@@ -1434,6 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5754e6e6f02cf0498e1c3910b434469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultModel: {fileID: 11400000, guid: f1845f3b29831c64eb72ff7e5f743e8b, type: 2}
   spawnPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &1542492750
 Transform:

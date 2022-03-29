@@ -16,7 +16,10 @@ public class Camera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        SetTarget();
+        if (GameManager.self.GetPlayer() != null)
+        {
+            SetTarget();
+        }
 
         Vector3 localOffset = target.transform.right * offset.x + target.transform.up * offset.y + target.transform.forward * offset.z;
         Vector3 desiredPosition = target.transform.position + localOffset;
@@ -30,7 +33,6 @@ public class Camera : MonoBehaviour
     {
 
     }
-
     public void SetTarget() => target = GameManager.self.GetPlayer().transform;
     
 }

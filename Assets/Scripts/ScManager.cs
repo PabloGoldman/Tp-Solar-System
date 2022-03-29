@@ -8,7 +8,6 @@ public class ScManager : MonoBehaviour
 
     void Awake()
     {
-
         if (self != null && self != this)
         {
             Destroy(this.gameObject);

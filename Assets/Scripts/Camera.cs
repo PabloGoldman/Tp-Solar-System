@@ -13,13 +13,15 @@ public class Camera : MonoBehaviour
         if (GameManager.self.GetPlayer() != null)
         {
             SetTarget();
+
+            Vector3 localOffset = target.transform.right * offset.x + target.transform.up * offset.y + target.transform.forward * offset.z;
+            Vector3 desiredPosition = target.transform.position + localOffset;
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.fixedDeltaTime * smoothSpeed);
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, Time.fixedDeltaTime * smoothSpeed);
         }
 
-        Vector3 localOffset = target.transform.right * offset.x + target.transform.up * offset.y + target.transform.forward * offset.z;
-        Vector3 desiredPosition = target.transform.position + localOffset;
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.fixedDeltaTime * smoothSpeed);
-
-        transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, Time.fixedDeltaTime * smoothSpeed);
+        
     }
 
     public void SetTarget() => target = GameManager.self.GetPlayer().transform;

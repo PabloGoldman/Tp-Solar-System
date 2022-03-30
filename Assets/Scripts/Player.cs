@@ -20,11 +20,13 @@ public class Player : MonoBehaviour
     private Vector3 initialPos;
     private Quaternion initialRot;
 
-   // Rigidbody rb;
-    
+    Rigidbody rb;
+
+    // Rigidbody rb;
+
     private void Awake()
     {
-       // rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Start()
@@ -45,14 +47,14 @@ public class Player : MonoBehaviour
 
         if (ScManager.self.ActualScene() == 1)
         {
-           Movement();
+            Movement();
         }
     }
 
     void Update()
     {
-        GetInput(); 
-    } 
+        GetInput();
+    }
 
     private void GetInput()
     {

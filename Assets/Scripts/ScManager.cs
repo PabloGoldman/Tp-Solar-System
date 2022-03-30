@@ -28,4 +28,9 @@ public class ScManager : MonoBehaviour
     {
         return SceneManager.GetActiveScene().buildIndex;
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

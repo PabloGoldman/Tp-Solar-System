@@ -206,9 +206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 516781593}
-        m_TargetAssemblyTypeName: ScManager, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 972569374}
+        m_TargetAssemblyTypeName: InGamePause, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -521,7 +521,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341046201}
-  m_Mesh: {fileID: 1757730596}
+  m_Mesh: {fileID: 1724578175}
 --- !u!1 &361646623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,7 +1710,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455598042}
   m_CullTransparentMesh: 1
---- !u!43 &1757730596
+--- !u!43 &1724578175
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

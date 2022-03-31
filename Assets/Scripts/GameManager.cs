@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //AGREGAR GAME QUITTER OBJETO VACIO CON UN SCRIPT PARA SALIR DEL JUEGO
+    //PREGUNTARLE A SERGIO POR QUE CUANDO VUELVO A UNA ESCENA SE PIERDEN LAS REFERENCIAS A LOS MANAGERS
 
     public static GameManager self;
 
@@ -46,12 +46,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ScManager.self.ActualScene() == 1 && !alreadyLoaded)
+        if (ScManager.self.ActualScene() == "SampleScene" && !alreadyLoaded)
         {
             InstantiatePlayer();
             alreadyLoaded = true;
         }
-        else if(ScManager.self.ActualScene() != 1)
+        else if(ScManager.self.ActualScene() != "SampleScene")
         {
             alreadyLoaded = false;
 
@@ -66,5 +66,10 @@ public class GameManager : MonoBehaviour
     {
         player = Instantiate(actualModel.character, spawnPoint, Quaternion.identity);
         player.SetActive(true);
+    }
+
+    public void ResetData()
+    {
+        alreadyLoaded = false;
     }
 }

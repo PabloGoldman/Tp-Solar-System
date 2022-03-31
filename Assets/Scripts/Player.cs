@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     {
         //Si estas en el juego
 
-        if (ScManager.self.ActualScene() == 1)
+        if (ScManager.self.ActualScene() == "SampleScene")
         {
             Movement();
         }

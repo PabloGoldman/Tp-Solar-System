@@ -42,6 +42,11 @@ public class InGamePause : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
+    public void ReturnToMenu()
+    {
+        ScManager.self.ChangeScene("Character Selection");
+    }
     public void QuitGame()
     {
         Debug.Log("QUIT");

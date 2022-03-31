@@ -19,13 +19,14 @@ public class ScManager : MonoBehaviour
         }
     }
 
-    public void ChangeScene(int scene)
+    public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);
+        Debug.Log(ActualScene());
     }
 
-    public int ActualScene()
+    public string ActualScene()
     {
-        return SceneManager.GetActiveScene().buildIndex;
+        return SceneManager.GetActiveScene().name;
     }
 }

@@ -20,10 +20,8 @@ public class Camera : MonoBehaviour
 
             transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, Time.fixedDeltaTime * smoothSpeed);
         }
-
-        
     }
-
+        
     public void SetTarget() => target = GameManager.self.GetPlayer().transform;
     
 }

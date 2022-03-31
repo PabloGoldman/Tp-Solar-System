@@ -5,6 +5,7 @@ using UnityEngine;
 public class InGamePause : MonoBehaviour
 {
     [SerializeField] GameObject PauseMenuUI;
+    [SerializeField] GameObject CreditsUI;
 
     bool GameIsPaused = false;
 
@@ -33,6 +34,7 @@ public class InGamePause : MonoBehaviour
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
+        CreditsUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }

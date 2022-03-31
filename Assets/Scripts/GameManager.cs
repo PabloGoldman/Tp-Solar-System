@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     //PREGUNTARLE A SERGIO POR QUE CUANDO VUELVO A UNA ESCENA SE PIERDEN LAS REFERENCIAS A LOS MANAGERS
 
+    //Añadir un menu manager, que le pida al sceneManager el cambio de escena, y que el boton tenga la referencia al objeto menu en vez de al scene manager
+
     public static GameManager self;
 
     [SerializeField] Models defaultModel;

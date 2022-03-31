@@ -48,6 +48,7 @@ public class InGamePause : MonoBehaviour
     public void ReturnToMenu()
     {
         ScManager.self.ChangeScene("Character Selection");
+        Resume();
     }
     public void QuitGame()
     {
